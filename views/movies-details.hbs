@@ -1,0 +1,31 @@
+<div class="movie-container">
+{{#each allMovies}}
+<div class="movie-card">
+
+    <img src="{{this.image}}" alt="">
+    <h5>{{this.title}}</h5>
+
+    <a href="/movies/{{this._id}}">See more!</a>
+
+    <div class="movie-detail-container">
+        <a href="/movies">Go back</a>
+        <h3>{{oneMovie.title}}</h3>
+        <h4>Stars</h4>
+
+    {{#each oneMovie.stars}}
+    <li>{{this}}</li>
+    {{/each}}
+
+    <p>{{oneMovie.description}}</p>
+    <ul>
+        {{#each oneMovie.showtimes}}
+        {{this}}
+        {{/each}}
+    </ul>
+
+    </div>
+
+</div>
+
+{{/each}}
+</div>
